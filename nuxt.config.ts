@@ -4,5 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/ui", "@nuxt/eslint"],
+  modules: ["@nuxt/ui", "@nuxt/eslint", "@nuxtjs/mdc"],
+  runtimeConfig: {
+    openaiApiKey: "",
+  },
+  mdc: {
+    highlight: {
+      theme: "material-theme-palenight",
+      langs: ["javascript", "typescript", "html", "vue", "markdown"],
+    },
+  },
 });
